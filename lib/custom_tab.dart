@@ -63,9 +63,7 @@ class _CustomTabState extends State<CustomTab> {
             _curr = num;
           });
         },
-        itemBuilder: (BuildContext context, int index) {
-          return _list[_curr];
-        },
+        itemBuilder: (context, index) =>  _list[_curr],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _curr,

@@ -15,6 +15,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
         length: 4,
         child: Scaffold(
+          appBar: AppBar(
+            title: const Text("Tab"),
+            backgroundColor: Colors.green,
+            actions: <Widget>[
+            ],
+          ),
           body: TabBarView(
             children: [
               Scaffold(
