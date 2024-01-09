@@ -54,7 +54,8 @@ class _CustomTabState extends State<CustomTab> {
       ),
       body: PageView.builder(
         scrollDirection: Axis.horizontal,
-        // reverse: true,
+        reverse: false,
+        itemCount:_list.length ,
         // physics: BouncingScrollPhysics(),
         controller: controller,
         onPageChanged: (num) {
