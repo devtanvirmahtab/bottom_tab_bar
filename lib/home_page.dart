@@ -1,4 +1,5 @@
 import 'package:bottom_tab_bar/custom_tab.dart';
+import 'package:bottom_tab_bar/pageview_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -25,15 +26,29 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Scaffold(
                 body: Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CustomTab()),
-                      );
-                    },
-                    child: const Text("Custom Tab"),
+                  child: Column(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CustomTab()),
+                          );
+                        },
+                        child: const Text("Custom Tab"),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SplashScreen()),
+                          );
+                        },
+                        child: const Text("Custom Slider"),
+                      ),
+                    ],
                   ),
                 ),
               ),

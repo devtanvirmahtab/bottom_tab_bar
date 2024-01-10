@@ -32,7 +32,7 @@ class _CustomTabState extends State<CustomTab> {
   @override
   void initState() {
     super.initState();
-    controller = PageController(initialPage: _curr);
+    controller = PageController(initialPage: _curr,keepPage: true);
   }
 
   @override
@@ -68,9 +68,7 @@ class _CustomTabState extends State<CustomTab> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _curr,
         onTap: (value) {
-          setState(() {
-            _curr = value;
-          });
+          controller.jumpToPage(value);
         },
         selectedItemColor: Colors.red,
         showUnselectedLabels: true,
